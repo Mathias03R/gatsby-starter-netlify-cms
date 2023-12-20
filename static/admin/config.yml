@@ -15,7 +15,7 @@ public_folder: /img
 collections:
   - name: "people"
     label: "People"
-    folder: "src/"  # Ruta al directorio que contiene people.json
+    folder: "src/md"  # Ruta al directorio que contiene people.json
     create: true  # Desactivar la creación de nuevos archivos, ya que no necesitas crear nuevos archivos para cada persona
     slug: "{{slug}}"  # Puedes ajustar esto según la estructura de tus datos
     fields:
