@@ -1,29 +1,45 @@
+import React, { useState, useEffect } from 'react';
 import PersonDiv from '../components/PersonDiv';
 import TopContainer from '../components/TopContainer';
 import Header from '../components/Header';
-import React from 'react';
-import data from "../people.json";
-import "./styles.css"
+import "./styles.css";
 
 function Index() {
-    const ruta_imagenes = "/img/";
 
-    return (
+  // Estado para almacenar los datos cargados desde los archivos JSON
+  const [peopleData, setPeopleData] = useState([]);
+
+  useEffect(() => {
+    // Obtener la lista de archivos JSON en la carpeta src/jsons
+    const context = require.context('../jsons', false, /\.json$/);
+    const jsonData = context.keys().map((key) => {
+      const jsonData = require(`../jsons/${key.replace('./', '')}`);
+      return jsonData;
+    });
+
+    // Actualizar el estado con los datos cargados
+    setPeopleData(jsonData);
+  }, []);
+
+  return (
     <div className="App">
-
-        <TopContainer/>
-        <Header/>
-        <main>
-        {data.map((person, index) => (
-        <PersonDiv key={index} img1={`${ruta_imagenes}${person.img1}`} img2={`${ruta_imagenes}${person.img2}`} name={person.name} />
+      <TopContainer />
+      <Header />
+      <main>
+        {peopleData.map((person, index) => (
+          <PersonDiv
+            key={index}
+            img1={`${person.img1}`}
+            img2={`${person.img2}`}
+            name={person.name}
+          />
         ))}
         <a id="button-facebook" href="https://www.facebook.com/profile.php?id=61550595601190">
-            <img id="img-facebook" src="/img/Facebook.png"/> 
+          <img id="img-facebook" src="/img/Facebook.png" />
         </a>
-        </main>
+      </main>
     </div>
-    );
+  );
 }
-
 
 export default Index;
