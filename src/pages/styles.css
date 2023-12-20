@@ -8,7 +8,7 @@ body {
 }
 
 #top-container{
-  background-image: url(/public/images/background.png);
+  background-image: url(/img/background.png);
   background-size: cover;
   height: 68%;
   display: flex;

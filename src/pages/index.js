@@ -6,7 +6,7 @@ import data from "../people.json";
 import "./styles.css"
 
 function Index() {
-    const ruta_imagenes = "/images/";
+    const ruta_imagenes = "/img/";
 
     return (
     <div className="App">
@@ -18,7 +18,7 @@ function Index() {
         <PersonDiv key={index} img1={`${ruta_imagenes}${person.img1}`} img2={`${ruta_imagenes}${person.img2}`} name={person.name} />
         ))}
         <a id="button-facebook" href="https://www.facebook.com/profile.php?id=61550595601190">
-            <img id="img-facebook" src="/images/Facebook.png"/> 
+            <img id="img-facebook" src="/img/Facebook.png"/> 
         </a>
         </main>
     </div>
