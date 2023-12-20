@@ -1,0 +1,209 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+#top-container{
+  background-image: url(/public/images/background.png);
+  background-size: cover;
+  height: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#iniciar-sesion{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+  color: black;
+  padding: 1px;
+  text-decoration: none;
+  background-color: rgb(240, 240, 240);
+  border: solid 1px black;
+}
+
+#title{
+  height: 10%;
+  padding: 4vh;
+  font-size: 5vh;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 0.1vh white;
+}
+
+#logo{
+  height: 50vh;
+}
+
+#sub-title{
+  height: 10%;
+  font-size: 3vh;
+  padding-bottom: 1%;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 0.05vh white;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 2vh;
+  padding: 1vw 0;
+  position: sticky;
+  background-color: rgb(190, 190, 190);
+  font-size: 100%;
+  z-index: 999;
+}
+
+header ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.nav-btn{
+  color: black;
+  text-decoration: none;
+  padding: 30% 1vw;
+}
+
+#changer{
+  position: absolute;
+  display: flex;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgb(219, 219, 219);
+  border-radius: 50%;
+  cursor: pointer;
+  width: 5vh;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+#changer:hover{
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#button-facebook{
+  position: fixed;
+  border: none;
+  bottom: 5vh;
+  right: 5vw;
+}
+#img-facebook{
+  width: 7.7vh;
+  border: none;
+}
+
+.nav-btn:hover{
+  color: red;
+}
+
+header li{
+  display: inline-block;
+}
+
+#menu-button-responsive{
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: space-around;
+  margin: auto;
+  padding: 4%;
+  width: 80vw;
+}
+
+.person-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  margin: 3% 0;
+}
+
+.person-img ,.person-img2{
+  width: 15vw;
+  height: 20vw;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.img-container {
+  position: relative;
+}
+
+.person-name{
+  margin: 10px;
+  padding: 10px;
+  font-size: 1vw;
+  background-color: rgb(247, 53, 53);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 913px){
+  #logo{
+      height: 30vh;
+  }
+
+  #title{
+      font-size: 6vw;
+      -webkit-text-stroke: 0.05vh white;
+  }
+
+  #sub-title{
+      font-size: 6vw;
+      -webkit-text-stroke: 0.025vh white;
+      text-align: center;
+  }
+
+  header {
+      display: flex;
+      height: 10vh;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.7vh;
+  }
+
+  header ul{
+      width: 80vw;
+  }
+
+  .person-div {
+      width: 48%;
+  }
+
+  .person-img ,.person-img2{
+      width: 30vw;
+      height: 40vw;
+  }
+  
+  .person-name{
+      font-size: 3vw;
+  }
+
+  #changer{
+      right: 1vw;
+      bottom: 1vh;
+  }
+  #button-facebook{
+      right: 1vw;
+      bottom: 1vh;
+  }
+}
