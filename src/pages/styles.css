@@ -77,7 +77,7 @@ header ul{
 #changer{
   position: absolute;
   display: flex;
-  bottom: 15px;
+  top: 15px;
   right: 15px;
   background-color: rgb(219, 219, 219);
   border-radius: 50%;
