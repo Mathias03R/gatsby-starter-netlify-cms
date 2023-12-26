@@ -8,7 +8,6 @@ function Header(){
             const person = container.querySelector('.person-name');
             return person && person.textContent.trim().toUpperCase().startsWith(letter);
         });
-    l
         if (targetContainer) {
             targetContainer.scrollIntoView({ behavior: 'smooth', block: "center"});
         }
