@@ -1,67 +1,79 @@
-import React from "react";
+import React from 'react';
 
 function Header(){
+    const scrollToLetter = (letter) => {
+        const containers = document.querySelectorAll('.person-div');
+    
+        const targetContainer = [...containers].find(container => {
+            const person = container.querySelector('.person-name');
+            return person && person.textContent.trim().toUpperCase().startsWith(letter);
+        });
+    l
+        if (targetContainer) {
+            targetContainer.scrollIntoView({ behavior: 'smooth', block: "center"});
+        }
+    };
     return(
         <header id="header">
-            <div class="menu" id="container-top-navbar-responsive">
+            <div className="menu" id="container-top-navbar-responsive">
                 <nav>
                     <p>
-                        <button class="material-icons nav-btn" id="menu-button-responsive">menu</button>
+                        <button className="material-icons nav-btn" id="menu-button-responsive">menu</button>
                     </p>
                 </nav>
             </div>
-            <div class="menu" id="container-top-navbar">
+            <div className="menu" id="container-top-navbar">
                 <nav>
                     <ul id="ul-nav">
-                        <li><a class="nav-btn" href="#A">A</a></li>
+                        <li><button onClick={() => scrollToLetter('A')} className="nav-btn">A</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#B">B</a></li>
+                        <li><button onClick={() => scrollToLetter('B')} className="nav-btn">B</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#C">C</a></li>
+                        <li><button onClick={() => scrollToLetter('C')} className="nav-btn">C</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#D">D</a></li>
+                        <li><button onClick={() => scrollToLetter('D')} className="nav-btn">D</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#E">E</a></li>
+                        <li><button onClick={() => scrollToLetter('E')} className="nav-btn">E</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#F">F</a></li>
+                        <li><button onClick={() => scrollToLetter('F')} className="nav-btn">F</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#G">G</a></li>
+                        <li><button onClick={() => scrollToLetter('G')} className="nav-btn">G</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#H">H</a></li>
+                        <li><button onClick={() => scrollToLetter('H')} className="nav-btn">H</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#I">I</a></li>
+                        <li><button onClick={() => scrollToLetter('I')} className="nav-btn">I</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#J">J</a></li>
+                        <li><button onClick={() => scrollToLetter('J')} className="nav-btn">J</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#K">K</a></li>
+                        <li><button onClick={() => scrollToLetter('K')} className="nav-btn">K</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#L">L</a></li>
+                        <li><button onClick={() => scrollToLetter('L')} className="nav-btn">L</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#M">M</a></li>
+                        <li><button onClick={() => scrollToLetter('M')} className="nav-btn">M</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#N">N</a></li>
+                        <li><button onClick={() => scrollToLetter('N')} className="nav-btn">N</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#O">O</a></li>
+                        <li><button onClick={() => scrollToLetter('O')} className="nav-btn">O</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#P">P</a></li>
+                        <li><button onClick={() => scrollToLetter('P')} className="nav-btn">P</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#Q">Q</a></li>
+                        <li><button onClick={() => scrollToLetter('Q')} className="nav-btn">Q</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#R">R</a></li>
+                        <li><button onClick={() => scrollToLetter('R')} className="nav-btn">R</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#S">S</a></li>
+                        <li><button onClick={() => scrollToLetter('S')} className="nav-btn">S</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#T">T</a></li>
+                        <li><button onClick={() => scrollToLetter('T')} className="nav-btn">T</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#U">U</a></li>
+                        <li><button onClick={() => scrollToLetter('U')} className="nav-btn">U</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#V">V</a></li>
+                        <li><button onClick={() => scrollToLetter('V')} className="nav-btn">V</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#W">W</a></li>
+                        <li><button onClick={() => scrollToLetter('W')} className="nav-btn">W</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#Y">Y</a></li>
+                        <li><button onClick={() => scrollToLetter('Y')} className="nav-btn">Y</button></li>
                         <span>-</span>
-                        <li><a class="nav-btn" href="#Z">Z</a></li>
+                        <li><button onClick={() => scrollToLetter('Z')} className="nav-btn">Z</button></li>
                     </ul>
                 </nav>
             </div>
