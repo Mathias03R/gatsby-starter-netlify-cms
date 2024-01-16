@@ -210,8 +210,13 @@ main {
 
   #changer{
       right: 1vw;
-      bottom: 1vh;
+      width: 1.5vh;
+      height: 1.5vh;
+      padding: 1.5vh;
+      font-size: 1vh;
+      top: 1vh;
   }
+  
   #button-facebook{
       right: 1vw;
       bottom: 1vh;
